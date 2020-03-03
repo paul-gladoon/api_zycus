@@ -1,0 +1,42 @@
+{
+  "name": "api_zycus",
+  "version": "1.0.0",
+  "description": "demo_version",
+  "scripts": {
+    "lint": "tslint -e './node_modules/' -p ./tsconfig.json",
+    "pretest": "npm run lint",
+    "test": "bash ./start.sh",
+    "test:api": "mocha --opts mocha.opts",
+    "tsc": "tsc",
+    "tscw": "tsc -w",
+    "validate": "npm ls"
+  },
+  "pre-commit": [
+    "lint",
+    "tsc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PaulGladoon/api_zycus.git"
+  },
+  "author": "Paul Gladoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PaulGladoon/api_zycus/issues"
+  },
+  "homepage": "https://github.com/PaulGladoon/api_zycus#readme",
+  "dependencies": {
+    "@types/chai": "^4.2.10",
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.7",
+    "@types/node-fetch": "^2.5.5",
+    "chai": "^4.2.0",
+    "minimist": "^1.2.0",
+    "mocha": "^7.0.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "node-fetch": "^2.6.0",
+    "ts-node": "^8.6.2",
+    "tslint": "^6.0.0",
+    "typescript": "^3.8.3"
+  }
+}
